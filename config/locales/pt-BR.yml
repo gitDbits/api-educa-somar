@@ -1,0 +1,4 @@
+pt-BR:
+  url_path_not_found: 'URL Não encontrada'
+  not_authorized_jwt: 'Não foi possível validar sua autenticação'
+  user_not_fount: 'Usuário não encontrado'
