@@ -11,6 +11,7 @@ gem 'rack-cors'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'rubocop'
 gem 'jbuilder', '~> 2.6'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
