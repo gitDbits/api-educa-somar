@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Creted user admin"
-User.create!(email: 'admin@educasomar.com.br', password: '123456')
+User.create!(name: 'Educa Somar', email: 'admin@educasomar.com.br', password: '123456')
