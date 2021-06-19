@@ -1,4 +1,4 @@
-class AuthenticationController < ApplicationController
+class Api::V1::AuthenticationController < ApplicationController
   before_action :authorize_request, except: :login
 
   def login
@@ -11,9 +11,9 @@ class AuthenticationController < ApplicationController
     else
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
-
-    private
   end
+  
+  private
 
   def login_params
     params.permit(:email, :password)
