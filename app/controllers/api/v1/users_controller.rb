@@ -7,7 +7,9 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
-  def show; end
+  def show
+    render json: @user
+  end
 
   def create
     @user = User.new(user_params)
@@ -33,14 +35,22 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def find_user
-    @user = User.find_by_email!(params[:_email])
+    @user = User.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     render json: { errors: I18n.t(:user_not_found) }, status: :not_found
   end
 
   def user_params
-    params.permit(
-      :name, :email, :password, :password_confirmation
+    params.permit(:name,
+                  :email,
+                  :password,
+                  :password_confirmation,
+                  :birthday,
+                  :phone,
+                  :street,
+                  :number,
+                  :neighborhood,
+                  :zip_code
     )
   end
 end
