@@ -1,4 +1,18 @@
 pt-BR:
-  url_path_not_found: 'URL Não encontrada'
-  not_authorized_jwt: 'Não foi possível validar sua autenticação'
-  user_not_fount: 'Usuário não encontrado'
+  url_path_not_found: "URL Não encontrada"
+  not_authorized_jwt: "Não foi possível validar sua autenticação, informe um token válido"
+  user_not_found: "Usuário não encontrado"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Não informado"
+              invalid: "Inválido"
+              taken: "já existe"
+            password:
+              blank: "Não informado"
+              too_short: "curto, no mínimo 6(seis) digitos"
+            password_confirmation:
+              confirmation: "está diferente do password informado"
