@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_20_235302) do
+ActiveRecord::Schema.define(version: 2021_08_21_140539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "institutions", force: :cascade do |t|
+    t.string "cnpj"
+    t.string "name"
+    t.string "email"
+    t.string "fantasy_name"
+    t.string "phone"
+    t.string "street"
+    t.string "number"
+    t.string "neighborhood"
+    t.string "zip_code"
+    t.boolean "university"
+    t.boolean "school"
+    t.string "uf"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_institutions_on_slug", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -27,6 +57,8 @@ ActiveRecord::Schema.define(version: 2021_08_20_235302) do
     t.string "number", limit: 20
     t.string "neighborhood"
     t.string "zip_code", limit: 20
+    t.string "slug"
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
 end

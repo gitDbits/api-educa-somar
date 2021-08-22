@@ -2,17 +2,37 @@ pt-BR:
   url_path_not_found: "URL Não encontrada"
   not_authorized_jwt: "Não foi possível validar sua autenticação, informe um token válido"
   user_not_found: "Usuário não encontrado"
+  institution_not_found: "CNPJ da Instituição não encontrado"
   activerecord:
     errors:
       models:
         user:
+          format: "File name of an attachment %{message}"
           attributes:
             email:
-              blank: "Não informado"
-              invalid: "Inválido"
+              blank: "não informado"
+              invalid: "inválido"
               taken: "já existe"
             password:
-              blank: "Não informado"
+              blank: "não informado"
               too_short: "curto, no mínimo 6(seis) digitos"
             password_confirmation:
               confirmation: "está diferente do password informado"
+        institution:
+          attributes:
+            cnpj:
+              blank: "não informado"
+              taken: "já existe"
+            name:
+              blank: "não informado"
+              taken: "já existe"
+            fantasy_name:
+              blank: "não informado"
+              taken: "já existe"
+            email:
+              blank: "não informado"
+              invalid: "inválido"
+              taken: "já existe"
+            phone:
+              blank: "não informado"
+              taken: "já existe"

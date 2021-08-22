@@ -12,6 +12,7 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'rubocop'
 gem 'jbuilder', '~> 2.6'
 gem 'bcrypt'
+gem 'friendly_id', '~> 5.4.0'
 
 group :development, :test do
   # There may be other lines in this block already. Simply append the following after:
