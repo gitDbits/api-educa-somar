@@ -50,7 +50,6 @@ class Api::V1::UsersController < ApplicationController
                   :street,
                   :number,
                   :neighborhood,
-                  :zip_code
-    )
+                  :zip_code)
   end
 end

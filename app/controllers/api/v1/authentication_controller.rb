@@ -12,7 +12,7 @@ class Api::V1::AuthenticationController < ApplicationController
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
   end
-  
+
   private
 
   def login_params
