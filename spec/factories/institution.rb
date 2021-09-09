@@ -17,8 +17,8 @@ FactoryBot.define do
     end
 
     trait :university do
-      school { true }
-      university { false }
+      school { false }
+      university { true }
     end
   end
 end

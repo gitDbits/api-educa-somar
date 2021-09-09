@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Institution, type: :model do
-  let(:school) { FactoryBot.create(:institution, :school) }
-  let(:university) { FactoryBot.create(:institution, :university) }
+  let(:school) { create(:institution, :school) }
+  let(:university) { create(:institution, :university) }
 
   it 'has a valid school' do
     expect(school).to be_valid

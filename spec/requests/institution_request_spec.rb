@@ -3,10 +3,10 @@ require 'rails_helper'
 include ApiSpecHelper
 
 RSpec.describe 'Institution', type: :request do 
-  let(:institution) { FactoryBot.create(:institution) }
+  let(:institution) { create(:institution) }
   let(:institution_id) { institution.id  }
-  let(:institutions) { FactoryBot.create_list(:institution, 5) }
-  let(:user) { FactoryBot.create(:user) }
+  let(:institutions) { create_list(:institution, 5) }
+  let(:user) { create(:user) }
   let(:token) { login user: { email: user.email, password: 'password' } }
   let(:auth_token) { { 'Authorization': token.to_s } }
   let(:valid_attributes) { { cnpj: Faker::Number.number(digits: 14), name: Faker::Name.first_name, fantasy_name: Faker::Name.last_name, email: Faker::Internet.safe_email, phone: Faker::PhoneNumber.phone_number } }

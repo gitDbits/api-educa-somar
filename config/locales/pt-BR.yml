@@ -3,6 +3,9 @@ pt-BR:
   not_authorized_jwt: "Não foi possível validar sua autenticação, informe um token válido"
   user_not_found: "Usuário não encontrado"
   institution_not_found: "CNPJ da Instituição não encontrado"
+  region_not_found: "Região não encontrada"
+  state_not_found: "Estado não encontrado"
+  city_not_found: "Região não encontrada"
   activerecord:
     errors:
       models:
