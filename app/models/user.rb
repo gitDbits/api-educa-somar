@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
+  
+  belongs_to :state
+  belongs_to :city
 
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
