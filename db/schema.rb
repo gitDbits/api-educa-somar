@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_224912) do
+ActiveRecord::Schema.define(version: 2021_09_09_172256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,9 +84,15 @@ ActiveRecord::Schema.define(version: 2021_09_08_224912) do
     t.string "neighborhood"
     t.string "zip_code", limit: 20
     t.string "slug"
+    t.bigint "state_id"
+    t.bigint "city_id"
+    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["slug"], name: "index_users_on_slug", unique: true
+    t.index ["state_id"], name: "index_users_on_state_id"
   end
 
   add_foreign_key "cities", "states"
   add_foreign_key "states", "regions"
+  add_foreign_key "users", "cities"
+  add_foreign_key "users", "states"
 end
