@@ -18,8 +18,15 @@ pt-BR:
               taken: "já existe em nosso cadastro"
             cpf:
               blank: "não informado"
-              invalid: "inválido"
               taken: "já existe em nosso cadastro"
+            street:
+              blank: "não informado"
+            number:
+              blank: "não informado"
+            neighborhood:
+              blank: "não informado"
+            zip_code:
+              blank: "não informado"
             password:
               blank: "não informado"
               too_short: "curto, no mínimo 6(seis) digitos"
