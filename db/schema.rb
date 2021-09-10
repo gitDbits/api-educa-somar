@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_09_181953) do
+ActiveRecord::Schema.define(version: 2021_09_10_162323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,11 @@ ActiveRecord::Schema.define(version: 2021_09_09_181953) do
     t.bigint "state_id"
     t.bigint "city_id"
     t.string "cpf", limit: 20
+    t.boolean "active", default: true
+    t.boolean "approved", default: false
+    t.boolean "admin", default: false
+    t.boolean "student", default: false
+    t.boolean "teacher", default: false
     t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["slug"], name: "index_users_on_slug", unique: true
     t.index ["state_id"], name: "index_users_on_state_id"
