@@ -1,7 +1,7 @@
 pt-BR:
   url_path_not_found: "URL Não encontrada"
   not_authorized_jwt: "Não foi possível validar sua autenticação, informe um token válido"
-  user_not_found: "Usuário não encontrado"
+  user_not_found: "CPF do usuário não encontrado"
   institution_not_found: "CNPJ da Instituição não encontrado"
   region_not_found: "Região não encontrada"
   state_not_found: "Estado não encontrado"
@@ -13,6 +13,10 @@ pt-BR:
           format: "File name of an attachment %{message}"
           attributes:
             email:
+              blank: "não informado"
+              invalid: "inválido"
+              taken: "já existe em nosso cadastro"
+            cpf:
               blank: "não informado"
               invalid: "inválido"
               taken: "já existe em nosso cadastro"
