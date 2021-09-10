@@ -6,7 +6,18 @@ pt-BR:
   region_not_found: "Região não encontrada"
   state_not_found: "Estado não encontrado"
   city_not_found: "Região não encontrada"
+  correios_cep:
+    errors:
+      messages:
+        not_exists: "%{zipcode}, não foi possível encontrar, tente novamente"
+        connection_failed: "Não foi possível conectar com os Correios, tente novamente"
+        invalid: "%{zipcode} é invalido, tente novamente"
+        timeouted: "A consulta do CEP está demorando, tente novamente"
   activerecord:
+    attributes:
+      user:
+        cpf: "CPF"
+        zip_code: "CEP"
     errors:
       models:
         user:
@@ -24,8 +35,6 @@ pt-BR:
             number:
               blank: "não informado"
             neighborhood:
-              blank: "não informado"
-            zip_code:
               blank: "não informado"
             password:
               blank: "não informado"

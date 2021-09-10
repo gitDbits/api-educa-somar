@@ -17,6 +17,7 @@ class User < ApplicationRecord
   validates :number, presence: true 
   validates :neighborhood, presence: true 
   validates :zip_code, presence: true 
+  validates :zip_code, correios_cep: true
   validates :password,
   length: { minimum: 6 },
   if: -> { new_record? || !password.nil? }
