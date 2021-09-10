@@ -14,6 +14,7 @@ gem 'rack-cors'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'rubocop'
 gem "cpf_cnpj"
+gem 'validates-correios-cep'
 
 
 group :development, :test do
