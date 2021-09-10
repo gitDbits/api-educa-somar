@@ -15,7 +15,7 @@ pt-BR:
             email:
               blank: "não informado"
               invalid: "inválido"
-              taken: "já existe"
+              taken: "já existe em nosso cadastro"
             password:
               blank: "não informado"
               too_short: "curto, no mínimo 6(seis) digitos"

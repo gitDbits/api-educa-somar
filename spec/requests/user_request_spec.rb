@@ -11,6 +11,7 @@ RSpec.describe 'User', type: :request do
   let(:valid_attributes) {
     { 
       email: Faker::Internet.email,
+      cpf: Faker::IDNumber.brazilian_cpf,
       state_id: user.state.id,
       city_id: user.city.id, 
       password: 'password',
