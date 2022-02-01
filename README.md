@@ -1,6 +1,6 @@
 # README
 
-Api desenvolvida para o [Educa somars](https://educasomar.com.br/)
+Api desenvolvida para o [Educa somar](https://educasomar.com.br/)
 
 Things you may want to cover:
 ## Vamos lá
